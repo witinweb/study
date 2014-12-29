@@ -1,16 +1,18 @@
-## [단일페이지 어플리케이션(SPA) 에서 서버의 역활은 무엇입니까?](http://weblogs.asp.net/dwahlin/what-s-the-role-of-the-server-in-single-page-applications-spas)
+## AngularJS - [단일페이지 어플리케이션(SPA) 에서 서버의 역할은 무엇인가?](http://weblogs.asp.net/dwahlin/what-s-the-role-of-the-server-in-single-page-applications-spas)
 
-모든 SPA 프레임워크(AngularJS, Ember, Durandal 등등)를 사용하는지에 관계없이 어떤 유형의 서비스(RESTful 또는 그외의 서비스) 와 프로세스 데이터를 사용합니다. 즉, 분명히 서버는 SPA를 실행 할 수 있는 역활을 합니다. 
+AngularJS를 처음 사용하신다면 우선 60분 가량의 영상인 [AngularJS in 60-ish Minutes](http://weblogs.asp.net/dwahlin/archive/2013/04/12/video-tutorial-angularjs-fundamentals-in-60-ish-minutes.aspx)를 보시길 권합니다. 제가 만든 [AngularJS JumpStart](https://weblogs.asp.net/dwahlin/the-angularjs-jumpstart-video-training-course-has-been-released) 영상도 보시길 바랍니다. 
+
+저는 최근 AngularJS에 대한 상담과 교육을 많이하고 있는데요 끊임없이 받는 질문이 있습니다: "단일페이지 어플리케이션(Single Page Applications)에서 서버의 역할은 무엇인가요?" 여러분의 사용하는 SPA 프레임워크(AngularJS](http://angularjs.org/), [Ember](http://emberjs.com/), [Durandal](http://durandaljs.com/), 등등)이 무엇이건 간에 서버의 데이터 처리를 위한 서비스(RESTful이든 아니든간에)에 의존하게 됩니다. 이것이 서버가 SPA와 함께 구동되는 분명한 역할입니다.
 
 ### 데이터 서비스 Data Service
 
-이것은 확실히 대부분의 사람들이 생각하는 SPA를 실행하는 서버의 역할인 가장 일반적인 역할입니다. 서버는 일반적으로 데이터의 GET, PUT, POST, DELETE 를 쉽게 사용할수 있도록 SPA클라이언트에 RESTful 서비스를 제공합니다.  이것은 Node.js, ASP.NET Web API, PHP, 클라우드 서비스, 그리고 HTTP, 웹 소켓, 또는 다른 기술을 사용하는 많은 다른 프레임워크를 이용하여 사용 할 수 있습니다. 앞서 언급 한 바와 같이, SPA를 구축 할 때 서버에 가장 눈에 띄는 역할입니다.
+이것은 확실히 대부분의 사람들이 생각하는 SPA를 실행하는 서버의 가장 일반적인 역할입니다. 서버는 일반적으로 데이터의 GET, PUT, POST, DELETE 를 쉽게 사용할수 있도록 SPA클라이언트에 RESTful 서비스를 제공합니다.  이것은 Node.js, ASP.NET Web API, PHP, Firebase와 같은 클라우드 서비스, 그리고 HTTP, 웹 소켓, 또는 다른 기술을 사용하는 많은 다른 프레임워크를 이용하여 사용 할 수 있습니다. 앞서 언급 한 바와 같이, SPA를 구축 할 때 서버에 가장 눈에 띄는 역할입니다.
 
-데이터의 공개 이외에도 데이터 서비스는 주어진 애플리케이션에 의해 요구되는 보안을 제공 할 책임이 있습니다.
+데이터의 노출하는 것 이외에도 데이터 서비스는 주어진 애플리케이션에 의해 요구되는 보안을 제공 할 책임이 있습니다.
 
 ### 데이터 캐싱 Data Caching
 
-일부 어플리케이션은 서버에 잦은 변경없이 데이터를 소비한다. 이 유형의 데이터는 종종 사용자 (제품 번호, 국가, 주, 부서, 위치 등)에 의해 공유 될 수 있습니다. 데이터 저장소에 대한 쿼리가 최소화 되도록 서버는 캐싱 데이터에 중요합니다. Node.js, ASP.NET MVC, PHP, 등등 많은 다른 서버-사이드 프레임워크를 사용하는거에 상관없이 어플리케이션의 확장성을 크게 증가시키는 캐싱 기능에 보다 더 빠르게 액세스 할 수 있습니다.  그것은 SPA 및 다른 유형의 어플리케이션의 서버의 역할을 통해 언제나 노력하려고 생각합니다. 캐시는 최고 입니다!(적절하게 사용하는 경우)
+일부 어플리케이션은 서버상에서 잦은 변경없는 데이터를 낭비합니다. 이 유형의 데이터(제품 번호, 국가, 주, 부서, 위치 등)는 종종 사용자간에 공유 될 수 있습니다. 데이터 저장소에 대한 쿼리가 최소화 되도록 서버는 캐싱 데이터에 중요합니다. Node.js, ASP.NET MVC, PHP, 등등 많은 다른 서버-사이드 프레임워크를 사용하는거에 상관없이 어플리케이션의 확장성을 크게 증가시키는 캐싱 기능에 보다 더 빠르게 액세스 할 수 있습니다.  그것은 SPA 및 다른 유형의 어플리케이션의 서버의 역할을 통해 언제나 노력하려고 생각합니다. 캐시는 최고 입니다!(적절하게 사용하는 경우)
 
  
 ### 동적 뷰 제공 Serving Dynamic Views
