@@ -1,3 +1,8 @@
+#Web Design Trends To Look Out For In 2015
+
+원문 : [http://www.elegantthemes.com/blog/resources/web-design-trends-to-look-out-for-in-2015](http://www.elegantthemes.com/blog/resources/web-design-trends-to-look-out-for-in-2015)
+
+번역 : [wooyj](http://wooyj.tumblr.com/), [gongjam](http://gongjam.co.kr)
 1. 반응형이 아니면 그냥 집에나 가버려!
 
 
