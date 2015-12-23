@@ -44,6 +44,9 @@ by : [스키머](http://schemr.tumblr.com)
 - 단위, 종단 테스트 개선
 - 모바일 웹과 모바일 앱에 대한 추가 지원
 
+###추가내용
+- 구글에 따르면 Angular 1에 비해서 Angular 2가 렌더와 페이지 업데이트가 8배 빨라졌다고 함 (http://techcrunch.com/2015/12/15/googles-angular-2-framework-hits-beta/)
+
 
 ## [Angular Material 1.0](https://material.angularjs.org)
 
